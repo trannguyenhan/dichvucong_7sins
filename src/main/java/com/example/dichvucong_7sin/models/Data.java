@@ -1,14 +1,14 @@
-package models;
+package com.example.dichvucong_7sin.models;
 
-import models.data.File;
-import models.data.Formula;
+import com.example.dichvucong_7sin.models.data.File;
+import com.example.dichvucong_7sin.models.data.Formula;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.util.List;
 
-@Document(collection = "data")
+@Document(collection = "dichvucong")
 public class Data {
     @Id
     private String id;

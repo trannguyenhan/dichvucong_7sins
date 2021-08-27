@@ -1,4 +1,4 @@
-package models.data;
+package com.example.dichvucong_7sin.models.data;
 
 import org.springframework.data.mongodb.core.mapping.Field;
 
