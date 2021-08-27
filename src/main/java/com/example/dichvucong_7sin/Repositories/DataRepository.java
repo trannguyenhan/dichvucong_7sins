@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface DataRepository extends MongoRepository<Data, String> {
+    //@Query(value = "select * from `users` where id = ?1")
     Optional<Data> findByTitle(String title);
     Optional<Data> findById(ObjectId id);
 }
