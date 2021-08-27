@@ -32,7 +32,7 @@ public class TFIDFCalculator {
                 }
             }
         }
-        return Math.log(docs.size() / n);
+        return n == 0 ? 0 : Math.log(docs.size() / n);
     }
 
     /**
