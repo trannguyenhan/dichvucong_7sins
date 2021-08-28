@@ -58,6 +58,7 @@ public class HomeController {
 
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("search", new Search());
+        modelAndView.addObject("question", key.getStr());
         modelAndView.addObject("rs", result);
         modelAndView.setViewName("result");
         return modelAndView;

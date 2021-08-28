@@ -496,7 +496,7 @@ legend {
 }
 
 .choices[data-type*="select-one"] .choices__button {
-
+  background-image: url("../../icons/cross-inverse.svg");
   padding: 0;
   background-size: 8px;
   height: 100%;
@@ -563,7 +563,7 @@ legend {
   margin-left: 8px;
   padding-left: 16px;
   border-left: 1px solid #008fa1;
-
+  background-image: url("../../icons/cross.svg");
   background-size: 8px;
   width: 8px;
   line-height: 1;
@@ -819,7 +819,7 @@ legend {
   -ms-flex-align: center;
       align-items: center;
   font-family: 'Poppins', sans-serif;
-  background: url("../images/home/background.png");
+  background: url("../images/home/background1.jpg");
   background-size: cover;
   background-position: center center;
   padding: 15px;
