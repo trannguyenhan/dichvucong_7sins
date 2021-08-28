@@ -1,37 +1,28 @@
 package com.example.dichvucong_7sin.Controller;
 
-/* import org.python.core.Py;
-import org.python.core.PyString;
-import org.python.core.PySystemState;
-import org.python.util.PythonInterpreter; */
-
+import com.example.dichvucong_7sin.models.Data;
+import com.example.dichvucong_7sin.services.IService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import support.JNA;
-import com.sun.jna.Library;
 import com.sun.jna.Native;
 import com.sun.jna.Platform;
-import com.sun.jna.Pointer;
 
 import java.nio.file.Path;
 import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.concurrent.Semaphore;
 
-import com.example.dichvucong_7sin.Repositories.DataRepository;
-
-
-//@Controller
 @RestController
 public class HomeController {
+    // init service
+    @Autowired
+    private IService<Data> service;
 
     JNA jna = null;
     private static final Semaphore mutex = new Semaphore(1);
@@ -102,6 +93,7 @@ public class HomeController {
             String pathpython3 = "";
             String pythonJNI = "";
 
+            // create platform
             if(Platform.isWindows()){
                 pathpython3v = srcDir + "/runtime/Windows/Python37.dll";
                 pathpython3 = srcDir + "/runtime/Windows/Python3.dll";
@@ -313,6 +305,18 @@ public class HomeController {
             System.out.println(ie);
         }
 
-        return ret;
+        Data data = service.find(desc);
+        String result = null;
+        if(ret.equals("1")){
+            result = data.getThanhPhanHoSo().toString();
+        } else if(ret.equals("2")){
+            result = data.getTrinhTuThucHien();
+        } else if(ret.equals("3")){
+            result = data.getCoQuanThucHien();
+        } else if(ret.equals("4")){
+            result = data.getCachThucThucHien().toString();
+        }
+
+        return result;
     }
 }

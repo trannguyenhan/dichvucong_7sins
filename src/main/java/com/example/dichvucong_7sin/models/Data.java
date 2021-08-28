@@ -25,6 +25,9 @@ public class Data {
     @Field(value = "Thành phần hồ sơ")
     private List<File> thanhPhanHoSo;
 
+    @Field(value = "Cơ quan thực hiện")
+    private String coQuanThucHien;
+
     public String getId() {
         return id;
     }
@@ -65,14 +68,23 @@ public class Data {
         this.thanhPhanHoSo = thanhPhanHoSo;
     }
 
+    public String getCoQuanThucHien() {
+        return coQuanThucHien;
+    }
+
+    public void setCoQuanThucHien(String coQuanThucHien) {
+        this.coQuanThucHien = coQuanThucHien;
+    }
+
     @Override
     public String toString() {
-        return "Data{" +
-                "id=" + id +
+        return "{" +
+                "id='" + id + '\'' +
                 ", title='" + title + '\'' +
                 ", TrinhTuThucHien='" + TrinhTuThucHien + '\'' +
                 ", cachThucThucHien=" + cachThucThucHien +
                 ", thanhPhanHoSo=" + thanhPhanHoSo +
+                ", coQuanThucHien='" + coQuanThucHien + '\'' +
                 '}';
     }
 }

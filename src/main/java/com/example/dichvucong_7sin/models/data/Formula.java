@@ -46,4 +46,14 @@ public class Formula {
     public void setMoTa(String moTa) {
         this.moTa = moTa;
     }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "hinhThucNop='" + hinhThucNop + '\'' +
+                ", thoiHanGiaiQuyet='" + thoiHanGiaiQuyet + '\'' +
+                ", lePhi='" + lePhi + '\'' +
+                ", moTa='" + moTa + '\'' +
+                '}';
+    }
 }
