@@ -1,4 +1,4 @@
-package com.example.dichvucong_7sin.Controller;
+package com.example.dichvucong_7sin.Controller.API;
 
 import com.example.dichvucong_7sin.models.Data;
 
@@ -32,6 +32,4 @@ public class DataController {
 
         return Pair.of(title, id);
     }
-
-    
 }

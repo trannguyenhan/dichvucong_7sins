@@ -35,13 +35,4 @@ public class File {
     public void setSoLuong(String soLuong) {
         this.soLuong = soLuong;
     }
-
-    @Override
-    public String toString() {
-        return "{" +
-                "'tenGiayTo' : '" + tenGiayTo + '\'' +
-                ", 'toKhai' : '" + toKhai + '\'' +
-                ", 'soLuong' : '" + soLuong + '\'' +
-                '}';
-    }
 }

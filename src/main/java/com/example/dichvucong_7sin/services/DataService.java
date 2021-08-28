@@ -62,7 +62,7 @@ public class DataService implements IService<Data> {
                 index = i;
                 base = scores.get(i);
             }
-        }
+        }; if(index == -1) index = 0; // need fix, temporary solution
 
         String idS = ids.get(index);
         Data data = this.get(idS);

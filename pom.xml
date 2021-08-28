@@ -14,13 +14,16 @@
     <name>dichvucong_7sin</name>
     <description>dichvucong_7sin</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>1.8</java.version>
     </properties>
     <dependencies>
+        <!-- mongoDB -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
         </dependency>
+
+        <!-- core -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -40,37 +43,37 @@
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
-        <!-- <dependency>
-            <groupId>org.python</groupId>
-            <artifactId>jython-standalone</artifactId>
-            <version>2.7.2</version>
-        </dependency> -->
-    
-        <!-- <dependency>
-            <groupId>org.apache.submarine</groupId>
-            <artifactId>submarine-python-interpreter</artifactId>
-            <version>0.4.0</version>
-        </dependency> -->
-    
-      <!-- <dependency>
-        <groupId>black.ninia</groupId>
-        <artifactId>jep</artifactId>
-        <version>3.9.1</version>
-      </dependency> -->
+        <!-- https://mvnrepository.com/artifact/com.google.cloud/spring-cloud-gcp-starter -->
+        <dependency>
+            <groupId>com.google.cloud</groupId>
+            <artifactId>spring-cloud-gcp-starter</artifactId>
+            <version>2.0.4</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.google.cloud/spring-cloud-gcp-starter-storage -->
+        <dependency>
+            <groupId>com.google.cloud</groupId>
+            <artifactId>spring-cloud-gcp-starter-storage</artifactId>
+            <version>2.0.0</version>
+        </dependency>
 
-        
-    
+
+        <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.13.1</version>
+        </dependency>
+
         <dependency>
             <groupId>net.java.dev.jna</groupId>
             <artifactId>jna</artifactId>
             <version>5.4.0</version>
         </dependency>
-
-        <!-- <dependency>
-            <groupId>net.java.dev.jna</groupId>
-            <artifactId>jna-platform</artifactId>
-            <version>5.9.0</version>
-        </dependency> -->
+        <dependency>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+            <version>2.0.2</version>
+        </dependency>
 
     </dependencies>
 
@@ -84,7 +87,15 @@
                     <includeSystemScope>true</includeSystemScope>
                 </configuration>
             </plugin>
-            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 
