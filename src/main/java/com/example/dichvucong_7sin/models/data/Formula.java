@@ -50,10 +50,10 @@ public class Formula {
     @Override
     public String toString() {
         return "{" +
-                "hinhThucNop='" + hinhThucNop + '\'' +
-                ", thoiHanGiaiQuyet='" + thoiHanGiaiQuyet + '\'' +
-                ", lePhi='" + lePhi + '\'' +
-                ", moTa='" + moTa + '\'' +
+                "'hinhThucNop' : '" + hinhThucNop + '\'' +
+                ", 'thoiHanGiaiQuyet' : '" + thoiHanGiaiQuyet + '\'' +
+                ", 'lePhi' : '" + lePhi + '\'' +
+                ", 'moTa' : '" + moTa + '\'' +
                 '}';
     }
 }

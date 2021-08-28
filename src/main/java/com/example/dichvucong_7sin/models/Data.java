@@ -79,12 +79,12 @@ public class Data {
     @Override
     public String toString() {
         return "{" +
-                "id='" + id + '\'' +
-                ", title='" + title + '\'' +
-                ", TrinhTuThucHien='" + TrinhTuThucHien + '\'' +
-                ", cachThucThucHien=" + cachThucThucHien +
-                ", thanhPhanHoSo=" + thanhPhanHoSo +
-                ", coQuanThucHien='" + coQuanThucHien + '\'' +
+                "'id' : '" + id + '\'' +
+                ", 'title' : '" + title + '\'' +
+                ", 'TrinhTuThucHien' : '" + TrinhTuThucHien + '\'' +
+                ", 'cachThucThucHien' : " + cachThucThucHien +
+                ", 'thanhPhanHoSo' : " + thanhPhanHoSo +
+                ", 'coQuanThucHien' : '" + coQuanThucHien + '\'' +
                 '}';
     }
 }

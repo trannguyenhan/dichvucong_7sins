@@ -39,9 +39,9 @@ public class File {
     @Override
     public String toString() {
         return "{" +
-                "tenGiayTo='" + tenGiayTo + '\'' +
-                ", toKhai='" + toKhai + '\'' +
-                ", soLuong='" + soLuong + '\'' +
+                "'tenGiayTo' : '" + tenGiayTo + '\'' +
+                ", 'toKhai' : '" + toKhai + '\'' +
+                ", 'soLuong' : '" + soLuong + '\'' +
                 '}';
     }
 }

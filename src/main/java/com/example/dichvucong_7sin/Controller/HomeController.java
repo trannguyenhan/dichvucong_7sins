@@ -306,7 +306,8 @@ public class HomeController {
         }
 
         Data data = service.find(desc);
-        String result = null;
+        String result = "";
+
         if(ret.equals("1")){
             result = data.getThanhPhanHoSo().toString();
         } else if(ret.equals("2")){
