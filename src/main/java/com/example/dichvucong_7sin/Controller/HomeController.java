@@ -12,6 +12,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
+import support.NormalizeText;
+
 import javax.validation.Valid;
 import java.io.IOException;
 
@@ -48,17 +50,17 @@ public class HomeController {
             if(ret.equals("1")){
                 result = new FileParse().parse(data.getThanhPhanHoSo());
             } else if(ret.equals("2")){
-                result = data.getTrinhTuThucHien();
+                result = NormalizeText.run(data.getTrinhTuThucHien());
             } else if(ret.equals("3")){
                 result = data.getCoQuanThucHien();
             } else if(ret.equals("4")){
-                result = new FormualParse().parse(data.getCachThucThucHien());
+                result = NormalizeText.run(new FormualParse().parse(data.getCachThucThucHien()));
             }
         }
 
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("search", new Search());
-        modelAndView.addObject("question", key.getStr());
+        modelAndView.addObject("search", new Search(key.getStr()));
+        //modelAndView.addObject("q", key.getStr());
         modelAndView.addObject("rs", result);
         modelAndView.setViewName("result");
         return modelAndView;

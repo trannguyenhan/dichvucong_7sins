@@ -1,6 +1,7 @@
 package com.example.dichvucong_7sin.models.parses;
 
 import com.example.dichvucong_7sin.models.data.File;
+import support.NormalizeText;
 
 import java.util.List;
 
@@ -12,8 +13,10 @@ public class FileParse implements IParse<File>{
 
     @Override
     public String parse(File model) {
-        return "Bạn cần có " + model.getTenGiayTo() + "<br />" +
+        String result = "Bạn cần có " + model.getTenGiayTo() + "<br />" +
                 "Với " + model.getSoLuong() + "<br />" +
                 "Bạn có thể tải giấy tờ trên tại <a href=' " + model.getToKhai() + " '></a>";
+
+        return NormalizeText.run(result);
     }
 }

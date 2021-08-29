@@ -410,3 +410,8 @@ html, body {
 #footerlocation p:nth-of-type(1) {
     font-weight: bold;
 }
+
+#result{
+    padding-left: 50px;
+    padding-right: 50px;
+}
