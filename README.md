@@ -1,4 +1,4 @@
-# dichvucong_7sins
+# dichvucong_7sins [WATCH VIDEO DEMO](https://youtu.be/UOl1t3dFQrY)
 ## Install enviroment python 
 ```
 pip3 install SpeechRecognition
