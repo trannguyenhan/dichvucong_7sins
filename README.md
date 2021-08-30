@@ -1,4 +1,9 @@
 # dichvucong_7sins [WATCH VIDEO DEMO](https://youtu.be/UOl1t3dFQrY)
+Bài dự thi Youth Digital Citizen Challenge "Thử thách công dân số": [https://4sv.vn/ydcc/ydcc](https://4sv.vn/ydcc/ydcc), fanpage: 
+[https://www.facebook.com/ydccvietnam](https://www.facebook.com/ydccvietnam)
+
+Livestream cuộc thi: [https://fb.watch/7IdbwGOl1g/](https://fb.watch/7IdbwGOl1g/)
+
 ## Install enviroment python 
 ```
 pip3 install SpeechRecognition
